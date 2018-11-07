@@ -1,27 +1,28 @@
 package com.atwa.base;
 
-import java.io.IOException;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
-
-import freemarker.template.TemplateException;
 
 @Configuration
 public class FreemarkerConfig {
 
-    @Bean
-    @Primary
-    public FreeMarkerConfigurationFactoryBean getFreeMarkerConfiguration() {
-        FreeMarkerConfigurationFactoryBean bean = new FreeMarkerConfigurationFactoryBean();
-        bean.setTemplateLoaderPath("classpath:/templates/");
-        return bean;
-    }
-    
+	private static Logger log = LoggerFactory.getLogger(FreemarkerConfig.class);
+
+	
+
+	@Bean
+	@Primary
+	public FreeMarkerConfigurationFactoryBean getFreeMarkerConfiguration() {
+		FreeMarkerConfigurationFactoryBean bean = new FreeMarkerConfigurationFactoryBean();
+		bean.setTemplateLoaderPath("classpath:/templates/");
+		return bean;
+	}
+	
+	
 //    @Bean
 //    public FreeMarkerConfigurer freemarkerConfig() throws IOException, TemplateException {
 //        FreeMarkerConfigurationFactory factory = new FreeMarkerConfigurationFactory();
