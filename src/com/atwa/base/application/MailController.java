@@ -1,4 +1,4 @@
-package com.atwa.base;
+package com.atwa.base.application;
 
 import java.io.IOException;
 import java.util.HashMap;

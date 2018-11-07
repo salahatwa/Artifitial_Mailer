@@ -10,6 +10,9 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.atwa.base.application.EmailService;
+import com.atwa.base.application.Mail;
+
 @SpringBootApplication
 public class Application {
 

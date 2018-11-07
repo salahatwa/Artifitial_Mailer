@@ -1,4 +1,4 @@
-package com.atwa.base;
+package com.atwa.base.application;
 
 import java.util.List;
 import java.util.Map;
